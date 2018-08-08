@@ -4,17 +4,14 @@ use Productions\Superclass\Goods;
 
 Class TV extends Goods 
 {
-	public function putscreenSize($screenSize)
-	{
-		$this->screenSize = $screenSize;
-		return $this;
-	}
-	public function puttecnology($tecnology)
-	{
-		$this->tecnology = $tecnology;
-		return $this;
-	}
-	
+	public function __construct($name,  $price, $region, $screenSize, $tecnology)
+    {
+    	$this->name = $name;
+    	$this->price = $price;
+    	$this->region = $region;
+        $this->screenSize= $screenSize;
+        $this->tecnology= $tecnology;
+    }
 	public function getDescription()
     {
     echo "<td><b>Модель: </b> {$this->name} <br>
@@ -22,4 +19,3 @@ Class TV extends Goods
     <b>Технология: </b>{$this->tecnology}<br> ";    
     }
 }
-?>
