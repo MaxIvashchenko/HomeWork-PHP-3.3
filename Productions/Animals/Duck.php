@@ -4,17 +4,14 @@ use Productions\Superclass\Goods;
 
 Class Duck extends Goods 
 {
-	
-	public function putage($age)
-	{
-		$this->age = $age;
-		return $this;
-	}
-	public function puthabitat($habitat)
-	{
-		$this->habitat = $habitat;
-		return $this;
-	}
+	public function __construct($name,  $price, $region, $age, $habitat)
+    {
+    	$this->name = $name;
+    	$this->price = $price;
+    	$this->region = $region;
+        $this->age = $age;
+        $this->habitat = $habitat;
+    }
 	public function getDescription()
     {
     echo "<td><b>Вид утки:</b> {$this->name} <br>
@@ -23,4 +20,3 @@ Class Duck extends Goods
      ";    
     }
 }
-?>
