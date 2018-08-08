@@ -4,16 +4,14 @@ use Productions\Superclass\Goods;
 
 Class Pen extends Goods 
 {
-	public function putcolor($color)
-	{
-		$this->color = $color;
-		return $this;
-	}
-	public function putpackAmount($packAmount)
-	{
-		$this->packAmount = $packAmount;
-		return $this;
-	}
+	public function __construct($name,  $price, $region, $color, $packAmount)
+    {
+    	$this->name = $name;
+    	$this->price = $price;
+    	$this->region = $region;
+        $this->color = $color;
+        $this->packAmount= $packAmount;
+    }
 	public function getDescription()
     {
     echo "<td><b>Название: </b> {$this->name} <br>
@@ -22,4 +20,3 @@ Class Pen extends Goods
      ";    
     }
 }
-?>
