@@ -4,14 +4,13 @@ use Productions\Superclass\Goods;
 
 Class Pen extends Goods 
 {
-	public function __construct($name,  $price, $region, $color, $packAmount)
-    {
-    	$this->name = $name;
-    	$this->price = $price;
-    	$this->region = $region;
-        $this->color = $color;
-        $this->packAmount= $packAmount;
-    }
+	public $color;
+	public $packAmount;
+	public function echoPen($color, $packAmount)
+	{
+		$this->color=$color;
+	  	$this->packAmount=$packAmount;
+	}
 	public function getDescription()
     {
     echo "<td><b>Название: </b> {$this->name} <br>
