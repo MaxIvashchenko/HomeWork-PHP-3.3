@@ -4,21 +4,15 @@ use Productions\Superclass\Goods;
 
 Class Car extends Goods 
 {
-	public function putmodel($model)
-	{
-		$this->model = $model;
-		return $this;
-	}
-	public function putcountryIssue($countryIssue)
-	{
-		$this->countryIssue = $countryIssue;
-		return $this;
-	}
-	public function puttransmission($transmission)
-	{
-		$this->transmission = $transmission;
-		return $this;
-	}
+	public function __construct($name,  $price, $region,$model, $countryIssue, $transmission)
+    {
+    	$this->name = $name;
+    	$this->price = $price;
+    	$this->region = $region;
+        $this->model = $model;
+        $this->countryIssue = $countryIssue;
+        $this->transmission = $transmission;
+    }
 	public function getDescription()
     {
     echo "<td><b>Название: </b> {$this->name} <br>
@@ -27,4 +21,3 @@ Class Car extends Goods
     <b>Коробка передач: </b>{$this->transmission} <br> ";    
     }
 }
-?>
