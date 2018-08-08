@@ -3,16 +3,14 @@ namespace Productions\Phones;
 use Productions\Superclass\Goods as Goods;
 Class Phone extends Goods
 {	
-	public function putwasMade($wasMade)
-	{
-		$this->wasMade = $wasMade;
-		return $this;
-	}
-	public function putquality($quality)
-	{
-		$this->quality = $quality;
-		return $this;
-	}
+	public function __construct($name,  $price, $region, $wasMade, $quality)
+    {
+    	$this->name = $name;
+    	$this->price = $price;
+    	$this->region = $region;
+        $this->wasMade = $wasMade;
+        $this->quality = $quality;
+    }
 	public function getDescription()
     {
     echo "<td><b>Наименование: </b> {$this->name} <br>
@@ -21,4 +19,3 @@ Class Phone extends Goods
      ";    
     }
 }
- ?>
