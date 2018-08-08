@@ -14,11 +14,16 @@ if (!empty($_GET['product'])) {
 if (isset($_GET['delete'])) {
     $basket->remove();
 }
-$car1 = new Car('Волга', 12000, 0, 'ГАЗ-3110', 'Россия', 'механика');
-$duck1 = new Duck('Утка', 100, 1, 6, 'юг');
-$phone = new Phone('Aplle Iphone 8plus', 1410, 2, 'Америка', 'выше среднего');
-$pen1 = new Pen('Ручка Паркер', 400, 1, 'синий', 40);
-$tv = new Tv('Samsung es06542', 900, 0, 55, '4K');
+$car1 = new Car('Волга', 12000, 0);
+$car1-> echoCar('ГАЗ-3110', 'Россия', 'механика');
+$duck1 = new Duck('Утка', 100, 1);
+$duck1->echoDuck(6, 'юг');
+$phone = new Phone('Aplle Iphone 8plus', 1410, 2);
+$phone->echoPhone('Америка', 'выше среднего');
+$pen1 = new Pen('Ручка Паркер', 10, 1);
+$pen1->echoPen('синий', 40);
+$tv = new Tv('Samsung es06542', 900, 0);
+$tv->echoTv(55, '4K');
 
 $products = [$car1, $duck1, $phone, $pen1, $tv ];
 ?>
