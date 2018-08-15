@@ -1,10 +1,10 @@
 <?php 
 namespace Productions\Superclass;
-
 abstract Class Goods {
 	public $name;
 	public $price;
-    public $region;
+     	public $region;
+	public $discount;
     public function __construct($name, $price, $region) 
     {
         $this->name = $name;
