@@ -6,7 +6,7 @@ use \Productions\Cars\Car;
 use \Productions\Animals\Duck;
 use \Productions\Phones\Phone;
 use \Productions\Pens\Pen;
-use \Productions\TVs\Tv;
+use \Productions\TVs\TV;
 $basket = new Card();
 if (!empty($_GET['product'])) {
     $basket->addToCard();
@@ -22,7 +22,7 @@ $phone = new Phone('Aplle Iphone 8plus', 1410, 2);
 $phone->echoPhone('Америка', 'выше среднего');
 $pen1 = new Pen('Ручка Паркер', 10, 1);
 $pen1->echoPen('синий', 40);
-$tv = new Tv('Samsung es06542', 900, 0);
+$tv = new TV('Samsung es06542', 900, 0);
 $tv->echoTv(55, '4K');
 
 $products = [$car1, $duck1, $phone, $pen1, $tv ];
